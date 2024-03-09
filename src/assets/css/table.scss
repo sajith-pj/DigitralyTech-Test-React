@@ -1,0 +1,32 @@
+.table {
+  width: 100%;
+  @apply text-text_color;
+  thead,
+  tbody {
+    tr {
+      th {
+        @apply text-sub_text font-normal border-b-[1px] border-[#EDF2F6];
+        padding: 10px 16px;
+        text-align: left;
+      }
+      td {
+        padding: 15px;
+      }
+      th,
+      td {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &.bordered {
+    thead,
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid #edf2f6;
+        }
+      }
+    }
+  }
+}

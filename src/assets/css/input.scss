@@ -1,0 +1,45 @@
+// TEXT INPUTS
+.input-container {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem;
+  margin-bottom: 16px;
+  .label {
+    margin-bottom: 8px;
+    display: block;
+    @apply text-text_color font-semibold text-[14px];
+  }
+  .input {
+    width: 100%;
+    display: block;
+    border-radius: 4px; /* 6px */
+    border: 1px solid rgba(115, 119, 145, 0.32);
+    background: transparent;
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+    &[data-invalid="true"]:not(:focus),
+    &:focus[data-invalid="true"] {
+      border: 1px solid rgb(239 68 68);
+    }
+
+    &:focus:not([data-invalid="true"]) {
+      border: 1px solid rgba(115, 119, 145, 0.32);
+    }
+
+    // DISABLED INPUT
+    &:disabled {
+      background: rgb(249 250 251);
+      color: rgb(107 114 128);
+      cursor: not-allowed;
+    }
+    //=== DISABLED INPUT=====
+
+    &::placeholder {
+      color: rgba(115, 119, 145, 0.53);
+    }
+  }
+}
